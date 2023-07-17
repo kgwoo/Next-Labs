@@ -1,18 +1,18 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 
 const CanvasView: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const divRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (canvasRef.current) {
             draw(canvasRef.current);
         }
     }, [canvasRef]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log(divRef.current);
     }, [divRef]);
 
@@ -23,6 +23,12 @@ const CanvasView: React.FC = () => {
             ctx.beginPath();
             ctx.fillStyle = "blue";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 3;
+            ctx.rect(0, 0, canvas.width, canvas.height);
+            ctx.stroke();
         }
     };
 

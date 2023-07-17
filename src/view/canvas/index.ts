@@ -1,3 +1,4 @@
-import CanvasView from "./CanvasView"
+import CanvasView from "./CanvasView";
+import CanvasImageView from "./CanvasImageView";
 
-export default CanvasView
+export { CanvasView, CanvasImageView };

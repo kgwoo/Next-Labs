@@ -1,11 +1,12 @@
 import { NextPage } from "next/types";
-import CanvasView from "@/view/canvas";
+import * as CanvasView from "@/view/canvas";
 
 const Homes: NextPage = () => {
     return (
         <div>
             <div>Canvas Study</div>
-            <CanvasView />
+            <CanvasView.CanvasImageView />
+            {/* <CanvasView.CanvasView /> */}
         </div>
     );
 };

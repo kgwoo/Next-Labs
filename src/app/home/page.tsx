@@ -1,7 +1,13 @@
-import React from "react";
+import { NextPage } from "next/types";
+import CanvasView from "@/view/canvas";
 
-const Homes: React.FC = () => {
-  return <div>홈</div>;
+const Homes: NextPage = () => {
+    return (
+        <div>
+            <div>Canvas Study</div>
+            <CanvasView />
+        </div>
+    );
 };
 
 export default Homes;
